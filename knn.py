@@ -30,7 +30,7 @@ html_7 = """
 st.markdown(html_7, unsafe_allow_html=True)
 st.markdown("")
 
-dt = pd.read_csv("./data/iris.csv")
+dt = pd.read_csv("./data/iris-3.csv")
 st.write(dt.head(10))
 
 dt1 = dt['petal.length'].sum()
@@ -64,7 +64,7 @@ sp_wd = st.number_input("กรุณาเลือกข้อมูล sepal.
 
 if st.button("ทำนายผล"):
     #st.write("ทำนาย")
-   dt = pd.read_csv("./data/iris.csv") 
+   dt = pd.read_csv("./data/iris-3.csv") 
    X = dt.drop('variety', axis=1)
    y = dt.variety   
    Knn_model = KNeighborsClassifier(n_neighbors=3)
